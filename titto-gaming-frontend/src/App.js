@@ -35,7 +35,7 @@ const App = () => {
       {showPrivacyPolicy ? (
       <div className="privacy-policy" style={{ marginTop: "80px", padding: "20px" }}>
         <h2>Privacy Policy</h2>
-        <p>Privacy Policy - Titto Esports
+        <p>Privacy Policy - Titto Gaming
 
         1. Introduction
 Welcome to Titto Gaming. Your privacy is important to us, and we are committed to protecting any personal information you share with us. This Privacy Policy explains how we collect, use, and protect your data when you use our gaming platform.
@@ -104,11 +104,16 @@ For any privacy concerns, contact us at:
             {/* <p className="legend">Solo Match</p> */}
           </div>
           <div>
-            <img src="/Moving_image1.png" alt="Image 2" />
+            <img src="/Moving_image_4.png" alt="Image 2" />
             {/* <p className="legend">Stay Updated</p>Discriptions */}
           </div>
           <div>
             <img src="/Moving_image3.jpg" alt="Image 3" />
+            {/* <p className="legend">Let's Go!! Its BGMI</p>Discriptions */}
+          </div>
+          {/* Add more images as needed */}
+          <div>
+            <img src="/Moving_image1.png" alt="Image 3" />
             {/* <p className="legend">Let's Go!! Its BGMI</p>Discriptions */}
           </div>
           {/* Add more images as needed */}
@@ -152,7 +157,7 @@ For any privacy concerns, contact us at:
         <p className="schedule-text">{data.schedule}</p>
 
         <a
-          href={data.registrationLink}
+          href="https://forms.gle/JoFzLcN6kwHz9BuK6"
           target="_blank"
           rel="noopener noreferrer"
           className="register-button"
@@ -187,7 +192,7 @@ const NavBar = ({ setShowPrivacyPolicy }) => (
         Privacy Policy
       </a>
       <a
-        href="https://docs.google.com/forms/d/1dRp77nP6vumnDHZSirKprhbbCowMAM5uE-7gEJ3ClkQ/edit"
+        href="https://forms.gle/JoFzLcN6kwHz9BuK6"
         target="_blank"
         rel="noopener noreferrer"
         className="register-button"
