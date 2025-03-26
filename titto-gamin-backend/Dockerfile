@@ -4,10 +4,16 @@ FROM maven:3.9.6-eclipse-temurin-21 AS build
 # Set the working directory
 WORKDIR /app
 
-# Copy the source code
+# Copy only the pom.xml first (this ensures dependencies are downloaded first)
+COPY pom.xml .
+
+# Download dependencies (this speeds up the build process)
+RUN mvn dependency:go-offline
+
+# Copy the rest of the project
 COPY . .
 
-# Build the application (this will download dependencies and create the JAR)
+# Build the application (this will create the JAR)
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create the final runtime image
