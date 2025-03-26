@@ -1,5 +1,5 @@
-# Use OpenJDK as the base image
-FROM openjdk:21-jdk-slim
+# Stage 1: Build the application
+FROM maven:3.8.4-openjdk-21 AS build
 
 # Set the working directory
 WORKDIR /app
@@ -16,13 +16,19 @@ RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 
 # Copy the source code
-COPY src src/
+COPY src ./src
 
-# Build the application
-RUN ./mvnw package
+# Build the application (skipping tests for faster builds)
+RUN ./mvnw clean package -DskipTests
 
-# Copy the built JAR file into the container
-COPY target/*.jar app.jar
+# Stage 2: Create a lightweight image to run the application
+FROM openjdk:21-jdk-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy only the built JAR from the first stage
+COPY --from=build /app/target/*.jar app.jar
 
 # Expose the port your Spring Boot app runs on
 EXPOSE 8080
