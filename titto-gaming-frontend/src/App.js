@@ -9,7 +9,7 @@ const App = () => {
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
 
   useEffect(() => {
-    fetch("https://titto-esports-backend-production.up.railway.app/api/welcome")
+    fetch("https://titto-esports-backend.onrender.com/api/welcome")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
