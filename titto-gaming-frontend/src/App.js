@@ -100,20 +100,20 @@ For any privacy concerns, contact us at:
           interval={3000}
         >
           <div>
-            <img src="/Moving_image2.png" alt="Image 1" />
+            <img src="https://i.imgur.com/EPzXwTr.png" alt="Image 1" />
             {/* <p className="legend">Solo Match</p> */}
           </div>
           <div>
-            <img src="/Moving_image_4.png" alt="Image 2" />
+            <img src="https://i.imgur.com/5y2UY9b.png" alt="Image 2" />
             {/* <p className="legend">Stay Updated</p>Discriptions */}
           </div>
           <div>
-            <img src="/Moving_image3.jpg" alt="Image 3" />
+            <img src="https://i.imgur.com/yCZSrqL.png" alt="Image 3" />
             {/* <p className="legend">Let's Go!! Its BGMI</p>Discriptions */}
           </div>
           {/* Add more images as needed */}
           <div>
-            <img src="/Moving_image1.png" alt="Image 3" />
+            <img src="https://i.imgur.com/CdVWHDk.jpeg" alt="Image 4" />
             {/* <p className="legend">Let's Go!! Its BGMI</p>Discriptions */}
           </div>
           {/* Add more images as needed */}
@@ -144,12 +144,18 @@ For any privacy concerns, contact us at:
     <h2 className="challenge-guide-heading">Challenge Guide</h2>
 
     {/* Resizable Video Container */}
-    <div className="video-container" contentEditable="true">
-      <video controls>
-      <source src="/VID20201122064205.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <div className="video-container">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/0cFOHeACXSs"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
   </div>
 </div>
 
@@ -186,7 +192,7 @@ Users must be 18 years or older to register and participate. Please ensure compl
 // ✅ Navigation Bar
 const NavBar = ({ setShowPrivacyPolicy }) => (
   <div style={navBarStyle}>
-    <img src="/Titto_Esports.png" alt="Titto Gaming Logo" style={logoStyle} />
+    <img src="https://i.imgur.com/WBtTZcu.png" alt="Titto Gaming Logo" style={logoStyle} />
     <div style={navLinksStyle}>
       <a href="#" className="nav-link" onClick={() => setShowPrivacyPolicy(true)}>
         Privacy Policy
@@ -246,7 +252,7 @@ const Footer = () => (
           yourchannel: TITYA
         </a>
         <br />
-        <img src="/Titto_Esports.png" alt="YouTube Profile" style={profileImageStyle} />
+        <img src="https://i.imgur.com/WBtTZcu.png" alt="YouTube Profile" style={profileImageStyle} />
       </div>
     </div>
   </div>
@@ -257,7 +263,7 @@ const backgroundStyle = {
   display: "flex",
   flexDirection: "column",
   minHeight: "100vh",
-  backgroundImage: "url('/backgroung.png')",
+  backgroundImage: "url('https://i.imgur.com/GwGgrq8.png)",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundAttachment: "fixed",
